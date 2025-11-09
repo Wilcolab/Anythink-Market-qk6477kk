@@ -1,0 +1,19 @@
+
+function toSnakeCase(text) {
+    return text
+        // Replace any non-alphanumeric characters with spaces
+        .replace(/[^\w\s]/g, ' ')
+        // Replace multiple spaces with a single space
+        .replace(/\s+/g, ' ')
+        // Trim spaces from start and end
+        .trim()
+        // Convert to lowercase
+        .toLowerCase()
+        // Replace spaces with underscores
+        .replace(/\s/g, '_');
+}
+
+// Example usage:
+// console.log(toSnakeCase("Hello World")); // hello_world
+// console.log(toSnakeCase("ThisIsATest")); // this_is_a_test
+// console.log(toSnakeCase("User-Name@Email")); // user_name_email
